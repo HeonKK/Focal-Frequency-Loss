@@ -6,10 +6,10 @@ This repository tries to implement [Focal Frequency Loss for Image Reconstructio
  [[fid](https://github.com/mseitzer/pytorch-fid)] pytorch-fid
  
 ## Environment
- Ubuntu
- Pytorch 1.9.0
- Python 3.7.10
- Numpy 1.21.1
+ Ubuntu 16.04   
+ Pytorch 1.9.0   
+ Python 3.7.10   
+ Numpy 1.21.1   
 
 ## Metric
  | Model | FID |
