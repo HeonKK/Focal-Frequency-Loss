@@ -23,7 +23,8 @@ This repository tries to implement [Focal Frequency Loss for Image Reconstructio
 ## Train
 ```python train.py --dataroot ./datasets/facades --name facads_pix2pix --model pix2pix --direction BtoA --checkpoints_dir [Checkpoint path] --gpu_ids [GPU Number]```   
 gpu_ids, checkpoints_dir option are additional thing.
-|Detail Options||
+* Detail Options
+|contents|values|
 |:---:|:---:|
 |Spatial loss | L1, Vanilla GAN Loss   |
 |Learning rate | 0.0002   |
@@ -40,10 +41,19 @@ gpu_ids, checkpoints_dir option are additional thing.
 * Generate images with testset   
 ```python test.py --dataroot ./datasets/facades/ --direction BtoA --model pix2pix --name [Checkpoint path]/facades_pix2pix --gpu_ids [GPU Number]```
 
-
+## Example
+| |A|B|
+|:---:|:---:|:---:|
+|mask/edge|![Alt text](examples/22_real_A.png)|![Alt text](examples/36_real_A.png)|
+|real|![Alt text](examples/22_real_B.png)|![Alt text](examples/36_real_B.png)|
+|w/o FFL|![Alt text](examples/22_fake_B_pretrained.png)|![Alt text](examples/36_fake_B_pretrained.png)|
+|w/ FFL|![Alt text](examples/22_fake_B.png)|![Alt text](examples/36_fake_B.png)|
 
 ## Metric
- | Model | FID |
- |:---:|:----:|
- | pix2pix(pretrained)| 128.7069 |
- | pix2pix + FFL | 125.4260 |
+- [x] : FID
+- [ ] : IS   
+   
+ | Model | FID | IS |
+ |:---:|:----:|:---:|
+ | pix2pix(pretrained)| 128.7069 | Add Later |
+ | pix2pix + FFL | 125.4260 | Add Later |
