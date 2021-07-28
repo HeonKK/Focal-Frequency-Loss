@@ -10,3 +10,9 @@ This repository tries to implement [Focal Frequency Loss for Image Reconstructio
  Pytorch 1.9.0
  Python 3.7.10
  Numpy 1.21.1
+
+## Metric
+ | Model | FID |
+ |:---:|:----:|
+ | pix2pix(pretrained)| 128.7069 |
+ | pix2pix + FFL | 125.4260 |
