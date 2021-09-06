@@ -9,10 +9,8 @@ def focal_loss(fake, real):
 
     ## 2D DFT with orthonomalization
     fake_fft = torch.fft.fft2(fake, norm = 'ortho')
-    fake_fft = torch.fft.fftshift(fake_fft)
 
     real_fft = torch.fft.fft2(real, norm = 'ortho')
-    real_fft = torch.fft.fftshift(real_fft)
 
     x_dist = (real_fft.real - fake_fft.real) ** 2
 
@@ -45,10 +43,8 @@ def focal_loss_np(fake, real):
     
     ## 2D DFT with orthonomalization
     fake_fft = np.fft.fft2(fake, norm = 'ortho')
-    fake_fft = np.fft.fftshift(fake_fft)
 
-    real_fft = np.fft.fft2(real, norm = 'ortho')
-    real_fft = np.fft.fftshift(real_fft)
+    real_fft = np.fft.fft2(real, norm = 'ortho') 
 
     x_dist = (real_fft.real - fake_fft.real) ** 2
 
